@@ -11,6 +11,14 @@ describe('wrap', () => {
   it('Returns the same string if string length equals columnNum', () => {
     expect(wrap('Heck yeah', 9)).to.equal('Heck yeah');
   });
+  it('Returns a single word wrapped if string is slightly to long', () => {
+    expect(wrap('Lorem ipsum dolor sit', 20)).to.equal(
+      'Lorem ipsum dolor\nsit'
+    );
+  });
+  it('Behaves strangley when words are too small', () => {
+    expect(wrap('love', 3)).to.equal('love');
+  });
   it('Returns a wrapped string', () => {
     expect(
       wrap(
