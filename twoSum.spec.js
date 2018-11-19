@@ -15,4 +15,4 @@ describe('twoSum', () => {
     expect(twoSum([2, 3, -1, 4], 3)).to.deep.equal([2, 3]);
     expect(twoSum([2, 3, -1, -8, 87, 17], 9)).to.deep.equal([3, 5]);
   });
-})
+});
